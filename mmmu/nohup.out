@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/u/li19/MMMU/mmmu/run_llava.py", line 9, in <module>
+    from llava.model.builder import load_pretrained_model
+ModuleNotFoundError: No module named 'llava'
+Traceback (most recent call last):
+  File "/u/li19/MMMU/mmmu/run_llava.py", line 9, in <module>
+    from llava.model.builder import load_pretrained_model
+ModuleNotFoundError: No module named 'llava'

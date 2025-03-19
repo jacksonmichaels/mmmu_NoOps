@@ -1,0 +1,5 @@
+*pycache*
+*.ipynb_checkpoints*
+mmmu/results/*
+mmmu/model_weights/*
+
