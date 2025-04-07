@@ -15,13 +15,13 @@ import importlib
 import json
 from datasets import concatenate_datasets, load_dataset
 from transformers import LlavaOnevisionForConditionalGeneration, AutoProcessor
-
+from PIL import Image
 # Set grad enabled to False
 torch.set_grad_enabled(False)
 from functools import partial
 import pickle
 #%%
-def load_noop(data_path, subject, split="validation", noop_root="/u/li19/MMMU/mmmu-noop", noOps='text'):
+def load_noop(data_path, subject, split="validation", noop_root="/jet/home/billyli/mmmu_NoOps/mmmu-noop", noOps='text'):
     from datasets import load_dataset
     # Load your dataset
     ds = load_dataset(data_path, subject, split=split)
@@ -39,7 +39,7 @@ def load_noop(data_path, subject, split="validation", noop_root="/u/li19/MMMU/mm
             img_data = json.load(f)
     
     # Define a function that adds "noop" to each example
-    def add_noop(example, noOps):
+    def add_noop(example, noOps, noOp_root="/jet/home/billyli/data_folder/NoOpImgs/mmmu_NoOp_imgs"):
         example_id = example['id']
         if noOps == "text" or noOps == "all":
             # print("adding text noop")
@@ -51,7 +51,9 @@ def load_noop(data_path, subject, split="validation", noop_root="/u/li19/MMMU/mm
             imgs = [(name, example[name]) for name in image_names if example[name] is not None]
             for img_pair, imgNoOp in zip(imgs, img_datum):
                 name, img = img_pair
-                example[name] = Image.open(imgNoOp + ".png")
+                noOp_path = os.path.join(noOp_root, example_id, name + ".png") 
+                # example[name] = Image.open(imgNoOp + ".png")
+                example[name] = Image.open(noOp_path)
                 # print("adding img noop: ", name)
         return example
 
@@ -83,7 +85,7 @@ def load_dataset(noop='all'):
     'Manage','Marketing','Materials','Math','Mechanical_Engineering','Music',
     'Pharmacy','Physics','Psychology','Public_Health','Sociology'
     ]
-    all_subs = ['Accounting', 'Art']
+    # all_subs = ['Accounting', 'Art']
     data_path = "MMMU/MMMU"
     split = "validation"
     subs = all_subs
@@ -94,7 +96,7 @@ def load_dataset(noop='all'):
     return dataset
 
 def load_model(model_name, device="cuda:0"):
-    model_id = "llava-hf/llava-onevision-qwen2-0.5b-ov-hf"
+    model_id = "llava-hf/llava-onevision-qwen2-7b-ov-hf"
     model = LlavaOnevisionForConditionalGeneration.from_pretrained(
         model_id,
         torch_dtype=torch.float16,
@@ -105,36 +107,6 @@ def load_model(model_name, device="cuda:0"):
         trust_remote_code=True
     )
     return processor, model
-
-# def load_model(model_name, device = "cuda"):
-#     model = processor = call_engine_fn = prompt_format_fn = None
-#     model_path = MODEL_DICT[model_name]['model_path']
-#     if model_name.startswith("llava-one"):
-#         from model.llava_code import prepare_inputs_llava, format_prompt_llava, load_model_llava
-#         model, processor = load_model_llava(model_path, device)
-#         call_engine_fn = prepare_inputs_llava
-#         prompt_format_fn = format_prompt_llava
-        
-#     if model_name == "idefics":
-#         from transformers import Idefics2Processor, Idefics2ForConditionalGeneration
-#         from model.idefics_code import call_idefics_engine, format_prompt_for_idefics
-        
-#         call_engine_fn = call_idefics_engine
-#         prompt_format_fn = format_prompt_for_idefics
-#         processor = Idefics2Processor.from_pretrained(model_path)
-#         model = Idefics2ForConditionalGeneration.from_pretrained(model_path)
-#         model.to(device)
-    
-#     if model_name == "blip-2":
-#         from model.blip_code import load_model_blip, call_engine_blip, format_prompt_blip
-#         model, processor = load_model_blip(model_path, device)
-#         call_engine_fn = call_engine_blip
-#         prompt_format_fn = format_prompt_blip
-        
-        
-#     nnsight_model = NNsight(model)
-#     call_engine_fn = partial(call_engine_fn, processor=processor, device=device)
-#     return nnsight_model, processor, call_engine_fn, prompt_format_fn
 
 
 def find_target_segments(x, target=151646):
@@ -254,7 +226,6 @@ def extract_attention(dset, model, processor, out_dir,store_all=False,layers=Non
             noop = sample_to_model_inputs(sample, sample['final_input_prompt_noop'], processor).to(device)
             noop_indices = find_inserted_section_indices(base.input_ids[0], noop.input_ids[0])
             img_segments = find_target_segments(noop.input_ids[0])
-
             
             output = model(**noop,output_attentions=True)
             logits = output.logits[0, -1] # get the logit of the last token
@@ -273,7 +244,9 @@ def extract_attention(dset, model, processor, out_dir,store_all=False,layers=Non
             if not store_all:
                 color_idx, shape_idx = (1560, 1561)
                 shape_range = (3, 1488)
-                img_attn = attn[:, 0, :, -1, img_segments[0]:img_segments[1]].mean(dim=2)
+                img_attn = 0
+                for segment in img_segments:
+                    img_attn += attn[:, 0, :, -1, segment[0]:segment[1]].mean(dim=2)
                 noop_attn = attn[:, 0, :, -1, noop_indices[0]:noop_indices[1]].mean(dim=2)
 
                 not_noop_mask = final_selection_mask(noop.input_ids[0], noop_indices)
@@ -289,8 +262,10 @@ def extract_attention(dset, model, processor, out_dir,store_all=False,layers=Non
             
             predicted_token_id = logits.argmax().item()
             predicted_token_str = processor.decode(predicted_token_id, skip_special_tokens=True, clean_up_tokenization_spaces=False)
-
-            pred_ans = processor.batch_decode(top_logit)
+            # print(logits)
+            # print(top_logit)
+            # print(stacked.shape)
+            pred_ans = processor.batch_decode([top_logit])
             
             temp = {
                 "id": sample['id'],
@@ -331,15 +306,13 @@ def get_args():
     parser.add_argument('--shuffle',action='store_true')  # on/off flag
     parser.add_argument('--return_logits',action='store_true')  # on/off flag
     parser.add_argument('--reprocess',action='store_true')  # on/off flag
-    parser.add_argument('--text_input_type', type=str, default="caption", help="caption, statement")
-    parser.add_argument('--conflict_type', type=str, default="direct_alternative", help="aligned, direct_alternative, direct_negation, indirect_negation, indirect_alternative")
     parser.add_argument('--debug',action='store_true')  # on/off flag
     parser.add_argument('--subsets', type=int, default=None)
     parser.add_argument('--store_all',action='store_true')  # on/off flag
 
     args = parser.parse_args()
     if args.output_dir is None:
-        args.output_dir = os.path.join("dataset/shape_dataset/cache", args.model, f"{args.text_input_type}_{args.conflict_type}")
+        args.output_dir = os.path.join("dataset/shape_dataset/cache", args.model)
     os.makedirs("results/"+args.output_dir, exist_ok=True)
     return args
     
@@ -460,8 +433,8 @@ def construct_prompt_l1(sample):
 def main():
     args = get_args()
     device = "cuda:0"
-    assert args.conflict_type in ["direct_aligned", "no_conflict", "direct_alternative", "direct_negation", "indirect_negation", "indirect_alternative"]
-    assert args.text_input_type in ["caption", "statement"]
+    # assert args.conflict_type in ["direct_aligned", "no_conflict", "direct_alternative", "direct_negation", "indirect_negation", "indirect_alternative"]
+    # assert args.text_input_type in ["caption", "statement"]
     
     print("Loading Dataset")
     print(args.noop)

@@ -1,0 +1,1249 @@
++ source /jet/home/billyli/.bashrc
+++ '[' -f /etc/bashrc ']'
+++ . /etc/bashrc
++++ '[' -z '' ']'
++++ BASHRCSOURCED=Y
++++ '[' '' ']'
++++ shopt -q login_shell
++++ '[' 66751 -gt 199 ']'
+++++ /usr/bin/id -gn
+++++ /usr/bin/id -un
++++ '[' iri120008p = billyli ']'
++++ umask 022
++++ SHELL=/bin/bash
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/00-modulepath.sh ']'
++++ '[' '' ']'
++++ . /etc/profile.d/00-modulepath.sh
+++++ '[' -z /etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core ']'
+++++ :
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/50-project.sh ']'
++++ '[' '' ']'
++++ . /etc/profile.d/50-project.sh
++++++ id -gn
++++++ id -un
+++++ export PROJECT=/ocean/projects/iri120008p/billyli
+++++ PROJECT=/ocean/projects/iri120008p/billyli
++++++ id -gn
+++++ export SALLOC_ACCOUNT=iri120008p
+++++ SALLOC_ACCOUNT=iri120008p
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/60-disable_wall.sh ']'
++++ '[' '' ']'
++++ . /etc/profile.d/60-disable_wall.sh
+++++ /usr/bin/tty -s
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/90-prompt.sh ']'
++++ '[' '' ']'
++++ . /etc/profile.d/90-prompt.sh
+++++ PS1='[\u@\h \W]\$ '
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/99-timeout.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/99-timeout.sh
+++++ '[' -n 30279411 ']'
+++++ export TMOUT=1800
+++++ TMOUT=1800
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/bionformatics.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/bionformatics.sh
+++++ alias 'bioinformatics=module keywords "Biological Sciences"'
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/colorgrep.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/colorgrep.sh
+++++ /usr/libexec/grepconf.sh -c
+++++ alias 'grep=grep --color=auto'
+++++ alias 'egrep=egrep --color=auto'
+++++ alias 'fgrep=fgrep --color=auto'
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/colorls.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/colorls.sh
+++++ '[' '!' -t 0 ']'
+++++ return
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/colorxzgrep.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/colorxzgrep.sh
+++++ /usr/libexec/grepconf.sh -c
+++++ alias 'xzgrep=xzgrep --color=auto'
+++++ alias 'xzegrep=xzegrep --color=auto'
+++++ alias 'xzfgrep=xzfgrep --color=auto'
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/colorzgrep.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/colorzgrep.sh
+++++ '[' -f /usr/libexec/grepconf.sh ']'
+++++ /usr/libexec/grepconf.sh -c
+++++ alias 'zgrep=zgrep --color=auto'
+++++ alias 'zfgrep=zfgrep --color=auto'
+++++ alias 'zegrep=zegrep --color=auto'
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/gawk.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/gawk.sh
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/interact.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/interact.sh
+++++ '[' -z /usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin ']'
+++++ echo /usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
+++++ grep -q /opt/packages/interact
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/lang.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/lang.sh
+++++ '[' -n '' ']'
+++++ for config in /etc/locale.conf "${HOME}/.i18n"
+++++ '[' -f /etc/locale.conf ']'
+++++ for config in /etc/locale.conf "${HOME}/.i18n"
+++++ '[' -f /jet/home/billyli/.i18n ']'
+++++ '[' -n '' ']'
+++++ unset LANG_backup config
+++++ '[' -n '' ']'
+++++ '[' -n '' ']'
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/less.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/less.sh
+++++ '[' -z '||/usr/bin/lesspipe.sh %s' ']'
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/mc.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/mc.sh
+++++ '[' -n '4.4.20(1)-release' ']'
+++++ alias 'mc=. /usr/libexec/mc/mc-wrapper.sh'
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/modules.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/modules.sh
+++++ . /etc/profile.d/00-modulepath.sh
++++++ '[' -z /etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core ']'
++++++ :
+++++ '[' -z '' ']'
+++++ '[' -z /usr/share/modulefiles ']'
+++++ PS_CMD=/usr/bin/ps
+++++ '[' '!' -x /usr/bin/ps ']'
+++++ EXPR_CMD=/usr/bin/expr
+++++ '[' '!' -x /usr/bin/expr ']'
+++++ BASENAME_CMD=/usr/bin/basename
+++++ '[' '!' -x /usr/bin/basename ']'
++++++ /usr/bin/ps -p 26275 -ocomm=
+++++ my_shell=slurm_script
++++++ /usr/bin/expr slurm_script : '-*\(.*\)'
+++++ my_shell=slurm_script
++++++ /usr/bin/basename slurm_script
+++++ my_shell=slurm_script
+++++ '[' -f /usr/share/lmod/lmod/init/slurm_script ']'
+++++ . /usr/share/lmod/lmod/init/sh
++++++ LMOD_ROOT=/usr/share/lmod
++++++ LMOD_PKG=/usr/share/lmod/lmod
++++++ LMOD_DIR=/usr/share/lmod/lmod/libexec/
++++++ LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
++++++ MODULESHOME=/usr/share/lmod/lmod
++++++ export LMOD_CMD
++++++ export LMOD_PKG
++++++ export LMOD_DIR
++++++ export MODULESHOME
++++++ export LMOD_DIR
+++++ unset my_shell PS_CMD EXPR_CMD BASENAME_CMD MODULEPATH_INIT
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/puppet-agent.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/puppet-agent.sh
+++++ '[' -z /usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin ']'
+++++ echo /usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
+++++ grep -q /opt/puppetlabs/bin
+++++ echo /usr/share/lmod/lmod/share/man::/opt/puppetlabs/puppet/share/man
+++++ grep -q /opt/puppetlabs/puppet/share/man
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/scl-init.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/scl-init.sh
+++++++ /bin/ps -p 26275 -ocomm=
++++++ /bin/basename slurm_script
+++++ shell=slurm_script
+++++ '[' slurm_script = bash ']'
+++++ MODULESHOME=/usr/share/Modules
+++++ export MODULESHOME
+++++ '[' /etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core = '' ']'
+++++ MODULEPATH=/etc/scl/modulefiles:/etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
+++++ export MODULEPATH
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/slurm.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/slurm.sh
+++++ export SBATCH_EXPORT=NONE
+++++ SBATCH_EXPORT=NONE
+++++ export SLURM_EXPORT_ENV=ALL
+++++ SLURM_EXPORT_ENV=ALL
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/ssh-x-forwarding.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/ssh-x-forwarding.sh
+++++ '[' -z '' ']'
+++++ return
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/vim.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/vim.sh
+++++ '[' -n '4.4.20(1)-release' -o -n '' -o -n '' ']'
++++++ /usr/bin/id -u
+++++ '[' 66751 -le 200 ']'
+++++ alias vi
+++++ alias vi=vim
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/which2.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/which2.sh
+++++ case "$(basename $(readlink /proc/$$/exe))" in
+++++++ readlink /proc/26275/exe
++++++ basename /usr/bin/bash
+++++ which_declare='declare -f'
+++++ which_opt=-f
+++++ export which_declare
+++++ export -f which
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/z00_lmod.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/z00_lmod.sh
+++++ . /etc/profile.d/00-modulepath.sh
++++++ '[' -z /etc/scl/modulefiles:/etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core ']'
++++++ :
+++++ '[' -z '' ']'
+++++ '[' -z /usr/share/modulefiles ']'
+++++ PS_CMD=/usr/bin/ps
+++++ '[' '!' -x /usr/bin/ps ']'
+++++ EXPR_CMD=/usr/bin/expr
+++++ '[' '!' -x /usr/bin/expr ']'
+++++ BASENAME_CMD=/usr/bin/basename
+++++ '[' '!' -x /usr/bin/basename ']'
++++++ /usr/bin/ps -p 26275 -ocomm=
+++++ my_shell=slurm_script
++++++ /usr/bin/expr slurm_script : '-*\(.*\)'
+++++ my_shell=slurm_script
++++++ /usr/bin/basename slurm_script
+++++ my_shell=slurm_script
+++++ '[' -f /usr/share/lmod/lmod/init/slurm_script ']'
+++++ . /usr/share/lmod/lmod/init/sh
++++++ LMOD_ROOT=/usr/share/lmod
++++++ LMOD_PKG=/usr/share/lmod/lmod
++++++ LMOD_DIR=/usr/share/lmod/lmod/libexec/
++++++ LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
++++++ MODULESHOME=/usr/share/lmod/lmod
++++++ export LMOD_CMD
++++++ export LMOD_PKG
++++++ export LMOD_DIR
++++++ export MODULESHOME
++++++ export LMOD_DIR
+++++ unset my_shell PS_CMD EXPR_CMD BASENAME_CMD MODULEPATH_INIT
++++ for i in /etc/profile.d/*.sh
++++ '[' -r /etc/profile.d/z01-load_allocations.sh ']'
++++ '[' '[\u@\h \W]\$ ' ']'
++++ . /etc/profile.d/z01-load_allocations.sh
+++++ DEBUG=0
+++++ BASE=/opt/modulefiles
+++++ '[' -f /etc/profile.d/modules.sh ']'
+++++ . /etc/profile.d/modules.sh
++++++ . /etc/profile.d/00-modulepath.sh
+++++++ '[' -z /etc/scl/modulefiles:/etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core ']'
+++++++ :
++++++ '[' -z '' ']'
++++++ '[' -z /usr/share/modulefiles ']'
++++++ PS_CMD=/usr/bin/ps
++++++ '[' '!' -x /usr/bin/ps ']'
++++++ EXPR_CMD=/usr/bin/expr
++++++ '[' '!' -x /usr/bin/expr ']'
++++++ BASENAME_CMD=/usr/bin/basename
++++++ '[' '!' -x /usr/bin/basename ']'
+++++++ /usr/bin/ps -p 26275 -ocomm=
++++++ my_shell=slurm_script
+++++++ /usr/bin/expr slurm_script : '-*\(.*\)'
++++++ my_shell=slurm_script
+++++++ /usr/bin/basename slurm_script
++++++ my_shell=slurm_script
++++++ '[' -f /usr/share/lmod/lmod/init/slurm_script ']'
++++++ . /usr/share/lmod/lmod/init/sh
+++++++ LMOD_ROOT=/usr/share/lmod
+++++++ LMOD_PKG=/usr/share/lmod/lmod
+++++++ LMOD_DIR=/usr/share/lmod/lmod/libexec/
+++++++ LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
+++++++ MODULESHOME=/usr/share/lmod/lmod
+++++++ export LMOD_CMD
+++++++ export LMOD_PKG
+++++++ export LMOD_DIR
+++++++ export MODULESHOME
+++++++ export LMOD_DIR
++++++ unset my_shell PS_CMD EXPR_CMD BASENAME_CMD MODULEPATH_INIT
++++++ id -u
+++++ '[' 66751 -ne 0 ']'
+++++ '[' 0 -ne 0 ']'
++++++ ls /opt/modulefiles
++++++ wc -l
+++++ '[' 3 -gt 0 ']'
+++++ '[' 0 -ne 0 ']'
+++++ module load allocations
++++++ /usr/share/lmod/lmod/libexec/lmod sh load allocations
+++++ eval '__LMOD_REF_COUNT_LOADEDMODULES=psc.allocations.user/1.0:1\;allocations/1.0:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=psc.allocations.user/1.0:allocations/1.0;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MODULEPATH=/etc/scl/modulefiles:2\;/opt/modulefiles/production:1\;/opt/modulefiles/preproduction:1\;/opt/modulefiles/deprecated:1\;/usr/share/modulefiles:1\;/usr/share/modulefiles/Linux:1\;/usr/share/modulefiles/Core:1\;/usr/share/lmod/lmod/modulefiles/Core:1;' export '__LMOD_REF_COUNT_MODULEPATH;' 'MODULEPATH=/etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/opt/packages/allocations/bin:1\;/usr/local/cuda/bin:1\;/jet/home/billyli/anaconda3/bin:1\;/jet/home/billyli/anaconda3/condabin:1\;/opt/packages/psc.allocations.user/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/opt/packages/interact/bin:1\;/opt/puppetlabs/bin:1\;/jet/home/billyli/.local/bin:1\;/jet/home/billyli/bin:1;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/opt/packages/psc.allocations.user/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin;' export 'PATH;' '__LMOD_REF_COUNT__LMFILES_=/opt/modulefiles/production/psc.allocations.user/1.0.lua:1\;/opt/modulefiles/production/allocations/1.0.lua:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/opt/modulefiles/production/psc.allocations.user/1.0.lua:/opt/modulefiles/production/allocations/1.0.lua;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXthbGxvY2F0aW9ucz17WyJmbiJdPSIvb3B0L21vZHVsZWZpbGVzL3Byb2R1Y3Rpb24vYWxsb2NhdGlvbnMvMS4wLmx1YSIsWyJmdWxsTmFtZSJdPSJhbGxvY2F0aW9ucy8xLjAiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJhbGxvY2F0aW9ucyIsfSxbInBzYy5hbGxvY2F0aW9ucy51c2VyIl09e1siZm4iXT0iL29wdC9tb2R1bGVmaWxlcy9wcm9kdWN0aW9uL3BzYy5hbGxvY2F0aW9ucy51c2VyLzEuMC5sdWEi;' export '_ModuleTable001_;' '_ModuleTable002_=LFsiZnVsbE5hbWUiXT0icHNjLmFsbG9jYXRpb25zLnVzZXIvMS4wIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHNjLmFsbG9jYXRpb25zLnVzZXIiLH0sfSxtcGF0aEE9eyIvZXRjL3NjbC9tb2R1bGVmaWxlcyIsIi9ldGMvc2NsL21vZHVsZWZpbGVzIiwiL29wdC9tb2R1bGVmaWxlcy9wcm9kdWN0aW9uIiwiL29wdC9tb2R1bGVmaWxlcy9wcmVwcm9kdWN0aW9uIiwiL29wdC9tb2R1bGVmaWxlcy9kZXByZWNhdGVkIiwiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcyIsIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvTGludXgiLCIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL0NvcmUiLCIvdXNyL3No;' export '_ModuleTable002_;' '_ModuleTable003_=YXJlL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9ldGMvc2NsL21vZHVsZWZpbGVzOi9vcHQvbW9kdWxlZmlsZXMvcHJvZHVjdGlvbjovb3B0L21vZHVsZWZpbGVzL3ByZXByb2R1Y3Rpb246L29wdC9tb2R1bGVmaWxlcy9kZXByZWNhdGVkOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXM6L3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9MaW51eDovdXNyL3NoYXJlL21vZHVsZWZpbGVzL0NvcmU6L3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsfQ==;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
++++++ __LMOD_REF_COUNT_LOADEDMODULES='psc.allocations.user/1.0:1;allocations/1.0:1'
++++++ export __LMOD_REF_COUNT_LOADEDMODULES
++++++ LOADEDMODULES=psc.allocations.user/1.0:allocations/1.0
++++++ export LOADEDMODULES
++++++ __LMOD_REF_COUNT_MODULEPATH='/etc/scl/modulefiles:2;/opt/modulefiles/production:1;/opt/modulefiles/preproduction:1;/opt/modulefiles/deprecated:1;/usr/share/modulefiles:1;/usr/share/modulefiles/Linux:1;/usr/share/modulefiles/Core:1;/usr/share/lmod/lmod/modulefiles/Core:1'
++++++ export __LMOD_REF_COUNT_MODULEPATH
++++++ MODULEPATH=/etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
++++++ export MODULEPATH
++++++ __LMOD_REF_COUNT_PATH='/opt/packages/allocations/bin:1;/usr/local/cuda/bin:1;/jet/home/billyli/anaconda3/bin:1;/jet/home/billyli/anaconda3/condabin:1;/opt/packages/psc.allocations.user/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/packages/interact/bin:1;/opt/puppetlabs/bin:1;/jet/home/billyli/.local/bin:1;/jet/home/billyli/bin:1'
++++++ export __LMOD_REF_COUNT_PATH
++++++ PATH=/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/opt/packages/psc.allocations.user/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++++++ export PATH
++++++ __LMOD_REF_COUNT__LMFILES_='/opt/modulefiles/production/psc.allocations.user/1.0.lua:1;/opt/modulefiles/production/allocations/1.0.lua:1'
++++++ export __LMOD_REF_COUNT__LMFILES_
++++++ _LMFILES_=/opt/modulefiles/production/psc.allocations.user/1.0.lua:/opt/modulefiles/production/allocations/1.0.lua
++++++ export _LMFILES_
++++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXthbGxvY2F0aW9ucz17WyJmbiJdPSIvb3B0L21vZHVsZWZpbGVzL3Byb2R1Y3Rpb24vYWxsb2NhdGlvbnMvMS4wLmx1YSIsWyJmdWxsTmFtZSJdPSJhbGxvY2F0aW9ucy8xLjAiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJhbGxvY2F0aW9ucyIsfSxbInBzYy5hbGxvY2F0aW9ucy51c2VyIl09e1siZm4iXT0iL29wdC9tb2R1bGVmaWxlcy9wcm9kdWN0aW9uL3BzYy5hbGxvY2F0aW9ucy51c2VyLzEuMC5sdWEi
++++++ export _ModuleTable001_
++++++ _ModuleTable002_=LFsiZnVsbE5hbWUiXT0icHNjLmFsbG9jYXRpb25zLnVzZXIvMS4wIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHNjLmFsbG9jYXRpb25zLnVzZXIiLH0sfSxtcGF0aEE9eyIvZXRjL3NjbC9tb2R1bGVmaWxlcyIsIi9ldGMvc2NsL21vZHVsZWZpbGVzIiwiL29wdC9tb2R1bGVmaWxlcy9wcm9kdWN0aW9uIiwiL29wdC9tb2R1bGVmaWxlcy9wcmVwcm9kdWN0aW9uIiwiL29wdC9tb2R1bGVmaWxlcy9kZXByZWNhdGVkIiwiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcyIsIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvTGludXgiLCIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL0NvcmUiLCIvdXNyL3No
++++++ export _ModuleTable002_
++++++ _ModuleTable003_=YXJlL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9ldGMvc2NsL21vZHVsZWZpbGVzOi9vcHQvbW9kdWxlZmlsZXMvcHJvZHVjdGlvbjovb3B0L21vZHVsZWZpbGVzL3ByZXByb2R1Y3Rpb246L29wdC9tb2R1bGVmaWxlcy9kZXByZWNhdGVkOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXM6L3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9MaW51eDovdXNyL3NoYXJlL21vZHVsZWZpbGVzL0NvcmU6L3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsfQ==
++++++ export _ModuleTable003_
++++++ _ModuleTable_Sz_=3
++++++ export _ModuleTable_Sz_
+++++ module load psc.allocations.user
++++++ /usr/share/lmod/lmod/libexec/lmod sh load psc.allocations.user
+++++ eval '__LMOD_REF_COUNT_LOADEDMODULES=allocations/1.0:1\;psc.allocations.user/1.0:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=allocations/1.0:psc.allocations.user/1.0;' export 'LOADEDMODULES;' 'MODULEPATH=/etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/opt/packages/psc.allocations.user/bin:1\;/opt/packages/allocations/bin:1\;/usr/local/cuda/bin:1\;/jet/home/billyli/anaconda3/bin:1\;/jet/home/billyli/anaconda3/condabin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/opt/packages/interact/bin:1\;/opt/puppetlabs/bin:1\;/jet/home/billyli/.local/bin:1\;/jet/home/billyli/bin:1;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin;' export 'PATH;' '__LMOD_REF_COUNT__LMFILES_=/opt/modulefiles/production/allocations/1.0.lua:1\;/opt/modulefiles/production/psc.allocations.user/1.0.lua:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/opt/modulefiles/production/allocations/1.0.lua:/opt/modulefiles/production/psc.allocations.user/1.0.lua;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXthbGxvY2F0aW9ucz17WyJmbiJdPSIvb3B0L21vZHVsZWZpbGVzL3Byb2R1Y3Rpb24vYWxsb2NhdGlvbnMvMS4wLmx1YSIsWyJmdWxsTmFtZSJdPSJhbGxvY2F0aW9ucy8xLjAiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJhbGxvY2F0aW9ucyIsfSxbInBzYy5hbGxvY2F0aW9ucy51c2VyIl09e1siZm4iXT0iL29wdC9tb2R1bGVmaWxlcy9wcm9kdWN0aW9uL3BzYy5hbGxvY2F0aW9ucy51c2VyLzEuMC5sdWEi;' export '_ModuleTable001_;' '_ModuleTable002_=LFsiZnVsbE5hbWUiXT0icHNjLmFsbG9jYXRpb25zLnVzZXIvMS4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHNjLmFsbG9jYXRpb25zLnVzZXIiLH0sfSxtcGF0aEE9eyIvZXRjL3NjbC9tb2R1bGVmaWxlcyIsIi9vcHQvbW9kdWxlZmlsZXMvcHJvZHVjdGlvbiIsIi9vcHQvbW9kdWxlZmlsZXMvcHJlcHJvZHVjdGlvbiIsIi9vcHQvbW9kdWxlZmlsZXMvZGVwcmVjYXRlZCIsIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMiLCIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL0xpbnV4IiwiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9Db3JlIiwiL3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmls;' export '_ModuleTable002_;' '_ModuleTable003_=ZXMvQ29yZSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvZXRjL3NjbC9tb2R1bGVmaWxlczovb3B0L21vZHVsZWZpbGVzL3Byb2R1Y3Rpb246L29wdC9tb2R1bGVmaWxlcy9wcmVwcm9kdWN0aW9uOi9vcHQvbW9kdWxlZmlsZXMvZGVwcmVjYXRlZDovdXNyL3NoYXJlL21vZHVsZWZpbGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvTGludXg6L3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9Db3JlOi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLH0=;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
++++++ __LMOD_REF_COUNT_LOADEDMODULES='allocations/1.0:1;psc.allocations.user/1.0:1'
++++++ export __LMOD_REF_COUNT_LOADEDMODULES
++++++ LOADEDMODULES=allocations/1.0:psc.allocations.user/1.0
++++++ export LOADEDMODULES
++++++ MODULEPATH=/etc/scl/modulefiles:/opt/modulefiles/production:/opt/modulefiles/preproduction:/opt/modulefiles/deprecated:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
++++++ export MODULEPATH
++++++ __LMOD_REF_COUNT_PATH='/opt/packages/psc.allocations.user/bin:1;/opt/packages/allocations/bin:1;/usr/local/cuda/bin:1;/jet/home/billyli/anaconda3/bin:1;/jet/home/billyli/anaconda3/condabin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/packages/interact/bin:1;/opt/puppetlabs/bin:1;/jet/home/billyli/.local/bin:1;/jet/home/billyli/bin:1'
++++++ export __LMOD_REF_COUNT_PATH
++++++ PATH=/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++++++ export PATH
++++++ __LMOD_REF_COUNT__LMFILES_='/opt/modulefiles/production/allocations/1.0.lua:1;/opt/modulefiles/production/psc.allocations.user/1.0.lua:1'
++++++ export __LMOD_REF_COUNT__LMFILES_
++++++ _LMFILES_=/opt/modulefiles/production/allocations/1.0.lua:/opt/modulefiles/production/psc.allocations.user/1.0.lua
++++++ export _LMFILES_
++++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXthbGxvY2F0aW9ucz17WyJmbiJdPSIvb3B0L21vZHVsZWZpbGVzL3Byb2R1Y3Rpb24vYWxsb2NhdGlvbnMvMS4wLmx1YSIsWyJmdWxsTmFtZSJdPSJhbGxvY2F0aW9ucy8xLjAiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJhbGxvY2F0aW9ucyIsfSxbInBzYy5hbGxvY2F0aW9ucy51c2VyIl09e1siZm4iXT0iL29wdC9tb2R1bGVmaWxlcy9wcm9kdWN0aW9uL3BzYy5hbGxvY2F0aW9ucy51c2VyLzEuMC5sdWEi
++++++ export _ModuleTable001_
++++++ _ModuleTable002_=LFsiZnVsbE5hbWUiXT0icHNjLmFsbG9jYXRpb25zLnVzZXIvMS4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHNjLmFsbG9jYXRpb25zLnVzZXIiLH0sfSxtcGF0aEE9eyIvZXRjL3NjbC9tb2R1bGVmaWxlcyIsIi9vcHQvbW9kdWxlZmlsZXMvcHJvZHVjdGlvbiIsIi9vcHQvbW9kdWxlZmlsZXMvcHJlcHJvZHVjdGlvbiIsIi9vcHQvbW9kdWxlZmlsZXMvZGVwcmVjYXRlZCIsIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMiLCIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL0xpbnV4IiwiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9Db3JlIiwiL3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmls
++++++ export _ModuleTable002_
++++++ _ModuleTable003_=ZXMvQ29yZSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvZXRjL3NjbC9tb2R1bGVmaWxlczovb3B0L21vZHVsZWZpbGVzL3Byb2R1Y3Rpb246L29wdC9tb2R1bGVmaWxlcy9wcmVwcm9kdWN0aW9uOi9vcHQvbW9kdWxlZmlsZXMvZGVwcmVjYXRlZDovdXNyL3NoYXJlL21vZHVsZWZpbGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvTGludXg6L3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9Db3JlOi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLH0=
++++++ export _ModuleTable003_
++++++ _ModuleTable_Sz_=3
++++++ export _ModuleTable_Sz_
++++ unset i
++++ unset -f pathmunge
++++ /jet/home/billyli/anaconda3/bin/conda shell.bash hook
+++ __conda_setup='export CONDA_EXE='\''/jet/home/billyli/anaconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/jet/home/billyli/anaconda3/bin/python'\''
+
+# Copyright (C) 2012 Anaconda, Inc
+# SPDX-License-Identifier: BSD-3-Clause
+
+__add_sys_prefix_to_path() {
+    # In dev-mode CONDA_EXE is python.exe and on Windows
+    # it is in a different relative location to condabin.
+    if [ -n "${_CE_CONDA}" ] && [ -n "${WINDIR+x}" ]; then
+        SYSP=$(\dirname "${CONDA_EXE}")
+    else
+        SYSP=$(\dirname "${CONDA_EXE}")
+        SYSP=$(\dirname "${SYSP}")
+    fi
+
+    if [ -n "${WINDIR+x}" ]; then
+        PATH="${SYSP}/bin:${PATH}"
+        PATH="${SYSP}/Scripts:${PATH}"
+        PATH="${SYSP}/Library/bin:${PATH}"
+        PATH="${SYSP}/Library/usr/bin:${PATH}"
+        PATH="${SYSP}/Library/mingw-w64/bin:${PATH}"
+        PATH="${SYSP}:${PATH}"
+    else
+        PATH="${SYSP}/bin:${PATH}"
+    fi
+    \export PATH
+}
+
+__conda_hashr() {
+    if [ -n "${ZSH_VERSION:+x}" ]; then
+        \rehash
+    elif [ -n "${POSH_VERSION:+x}" ]; then
+        :  # pass
+    else
+        \hash -r
+    fi
+}
+
+__conda_activate() {
+    if [ -n "${CONDA_PS1_BACKUP:+x}" ]; then
+        # Handle transition from shell activated with conda <= 4.3 to a subsequent activation
+        # after conda updated to >= 4.4. See issue #6173.
+        PS1="$CONDA_PS1_BACKUP"
+        \unset CONDA_PS1_BACKUP
+    fi
+
+    \local cmd="$1"
+    shift
+    \local ask_conda
+    CONDA_INTERNAL_OLDPATH="${PATH}"
+    __add_sys_prefix_to_path
+    ask_conda="$(PS1="$PS1" "$CONDA_EXE" $_CE_M $_CE_CONDA shell.posix "$cmd" "$@")" || \return $?
+    rc=$?
+    PATH="${CONDA_INTERNAL_OLDPATH}"
+    \eval "$ask_conda"
+    if [ $rc != 0 ]; then
+        \export PATH
+    fi
+    __conda_hashr
+}
+
+__conda_reactivate() {
+    \local ask_conda
+    CONDA_INTERNAL_OLDPATH="${PATH}"
+    __add_sys_prefix_to_path
+    ask_conda="$(PS1="$PS1" "$CONDA_EXE" $_CE_M $_CE_CONDA shell.posix reactivate)" || \return $?
+    PATH="${CONDA_INTERNAL_OLDPATH}"
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+conda() {
+    if [ "$#" -lt 1 ]; then
+        "$CONDA_EXE" $_CE_M $_CE_CONDA
+    else
+        \local cmd="$1"
+        shift
+        case "$cmd" in
+            activate|deactivate)
+                __conda_activate "$cmd" "$@"
+                ;;
+            install|update|upgrade|remove|uninstall)
+                CONDA_INTERNAL_OLDPATH="${PATH}"
+                __add_sys_prefix_to_path
+                "$CONDA_EXE" $_CE_M $_CE_CONDA "$cmd" "$@"
+                \local t1=$?
+                PATH="${CONDA_INTERNAL_OLDPATH}"
+                if [ $t1 = 0 ]; then
+                    __conda_reactivate
+                else
+                    return $t1
+                fi
+                ;;
+            *)
+                CONDA_INTERNAL_OLDPATH="${PATH}"
+                __add_sys_prefix_to_path
+                "$CONDA_EXE" $_CE_M $_CE_CONDA "$cmd" "$@"
+                \local t1=$?
+                PATH="${CONDA_INTERNAL_OLDPATH}"
+                return $t1
+                ;;
+        esac
+    fi
+}
+
+if [ -z "${CONDA_SHLVL+x}" ]; then
+    \export CONDA_SHLVL=0
+    # In dev-mode CONDA_EXE is python.exe and on Windows
+    # it is in a different relative location to condabin.
+    if [ -n "${_CE_CONDA+x}" ] && [ -n "${WINDIR+x}" ]; then
+        PATH="$(\dirname "$CONDA_EXE")/condabin${PATH:+":${PATH}"}"
+    else
+        PATH="$(\dirname "$(\dirname "$CONDA_EXE")")/condabin${PATH:+":${PATH}"}"
+    fi
+    \export PATH
+
+    # We'\''re not allowing PS1 to be unbound. It must at least be set.
+    # However, we'\''re not exporting it, which can cause problems when starting a second shell
+    # via a first shell (i.e. starting zsh from bash).
+    if [ -z "${PS1+x}" ]; then
+        PS1=
+    fi
+fi
+
+conda activate base'
+++ '[' 0 -eq 0 ']'
+++ eval 'export CONDA_EXE='\''/jet/home/billyli/anaconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/jet/home/billyli/anaconda3/bin/python'\''
+
+# Copyright (C) 2012 Anaconda, Inc
+# SPDX-License-Identifier: BSD-3-Clause
+
+__add_sys_prefix_to_path() {
+    # In dev-mode CONDA_EXE is python.exe and on Windows
+    # it is in a different relative location to condabin.
+    if [ -n "${_CE_CONDA}" ] && [ -n "${WINDIR+x}" ]; then
+        SYSP=$(\dirname "${CONDA_EXE}")
+    else
+        SYSP=$(\dirname "${CONDA_EXE}")
+        SYSP=$(\dirname "${SYSP}")
+    fi
+
+    if [ -n "${WINDIR+x}" ]; then
+        PATH="${SYSP}/bin:${PATH}"
+        PATH="${SYSP}/Scripts:${PATH}"
+        PATH="${SYSP}/Library/bin:${PATH}"
+        PATH="${SYSP}/Library/usr/bin:${PATH}"
+        PATH="${SYSP}/Library/mingw-w64/bin:${PATH}"
+        PATH="${SYSP}:${PATH}"
+    else
+        PATH="${SYSP}/bin:${PATH}"
+    fi
+    \export PATH
+}
+
+__conda_hashr() {
+    if [ -n "${ZSH_VERSION:+x}" ]; then
+        \rehash
+    elif [ -n "${POSH_VERSION:+x}" ]; then
+        :  # pass
+    else
+        \hash -r
+    fi
+}
+
+__conda_activate() {
+    if [ -n "${CONDA_PS1_BACKUP:+x}" ]; then
+        # Handle transition from shell activated with conda <= 4.3 to a subsequent activation
+        # after conda updated to >= 4.4. See issue #6173.
+        PS1="$CONDA_PS1_BACKUP"
+        \unset CONDA_PS1_BACKUP
+    fi
+
+    \local cmd="$1"
+    shift
+    \local ask_conda
+    CONDA_INTERNAL_OLDPATH="${PATH}"
+    __add_sys_prefix_to_path
+    ask_conda="$(PS1="$PS1" "$CONDA_EXE" $_CE_M $_CE_CONDA shell.posix "$cmd" "$@")" || \return $?
+    rc=$?
+    PATH="${CONDA_INTERNAL_OLDPATH}"
+    \eval "$ask_conda"
+    if [ $rc != 0 ]; then
+        \export PATH
+    fi
+    __conda_hashr
+}
+
+__conda_reactivate() {
+    \local ask_conda
+    CONDA_INTERNAL_OLDPATH="${PATH}"
+    __add_sys_prefix_to_path
+    ask_conda="$(PS1="$PS1" "$CONDA_EXE" $_CE_M $_CE_CONDA shell.posix reactivate)" || \return $?
+    PATH="${CONDA_INTERNAL_OLDPATH}"
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+conda() {
+    if [ "$#" -lt 1 ]; then
+        "$CONDA_EXE" $_CE_M $_CE_CONDA
+    else
+        \local cmd="$1"
+        shift
+        case "$cmd" in
+            activate|deactivate)
+                __conda_activate "$cmd" "$@"
+                ;;
+            install|update|upgrade|remove|uninstall)
+                CONDA_INTERNAL_OLDPATH="${PATH}"
+                __add_sys_prefix_to_path
+                "$CONDA_EXE" $_CE_M $_CE_CONDA "$cmd" "$@"
+                \local t1=$?
+                PATH="${CONDA_INTERNAL_OLDPATH}"
+                if [ $t1 = 0 ]; then
+                    __conda_reactivate
+                else
+                    return $t1
+                fi
+                ;;
+            *)
+                CONDA_INTERNAL_OLDPATH="${PATH}"
+                __add_sys_prefix_to_path
+                "$CONDA_EXE" $_CE_M $_CE_CONDA "$cmd" "$@"
+                \local t1=$?
+                PATH="${CONDA_INTERNAL_OLDPATH}"
+                return $t1
+                ;;
+        esac
+    fi
+}
+
+if [ -z "${CONDA_SHLVL+x}" ]; then
+    \export CONDA_SHLVL=0
+    # In dev-mode CONDA_EXE is python.exe and on Windows
+    # it is in a different relative location to condabin.
+    if [ -n "${_CE_CONDA+x}" ] && [ -n "${WINDIR+x}" ]; then
+        PATH="$(\dirname "$CONDA_EXE")/condabin${PATH:+":${PATH}"}"
+    else
+        PATH="$(\dirname "$(\dirname "$CONDA_EXE")")/condabin${PATH:+":${PATH}"}"
+    fi
+    \export PATH
+
+    # We'\''re not allowing PS1 to be unbound. It must at least be set.
+    # However, we'\''re not exporting it, which can cause problems when starting a second shell
+    # via a first shell (i.e. starting zsh from bash).
+    if [ -z "${PS1+x}" ]; then
+        PS1=
+    fi
+fi
+
+conda activate base'
++++ export CONDA_EXE=/jet/home/billyli/anaconda3/bin/conda
++++ CONDA_EXE=/jet/home/billyli/anaconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/jet/home/billyli/anaconda3/bin/python
++++ CONDA_PYTHON_EXE=/jet/home/billyli/anaconda3/bin/python
++++ '[' -z x ']'
++++ conda activate base
++++ '[' 2 -lt 1 ']'
++++ local cmd=activate
++++ shift
++++ case "$cmd" in
++++ __conda_activate activate base
++++ '[' -n '' ']'
++++ local cmd=activate
++++ shift
++++ local ask_conda
++++ CONDA_INTERNAL_OLDPATH=/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++++ __add_sys_prefix_to_path
++++ '[' -n '' ']'
+++++ dirname /jet/home/billyli/anaconda3/bin/conda
++++ SYSP=/jet/home/billyli/anaconda3/bin
+++++ dirname /jet/home/billyli/anaconda3/bin
++++ SYSP=/jet/home/billyli/anaconda3
++++ '[' -n '' ']'
++++ PATH=/jet/home/billyli/anaconda3/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++++ export PATH
+++++ PS1='[\u@\h \W]\$ '
+++++ /jet/home/billyli/anaconda3/bin/conda shell.posix activate base
++++ ask_conda='PS1='\''(base) [\u@\h \W]\$ '\''
+export PATH='\''/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\'''
++++ rc=0
++++ PATH=/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++++ eval 'PS1='\''(base) [\u@\h \W]\$ '\''
+export PATH='\''/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\'''
+++++ PS1='(base) [\u@\h \W]\$ '
+++++ export PATH=/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
+++++ PATH=/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
+++++ export CONDA_SHLVL=1
+++++ CONDA_SHLVL=1
+++++ export 'CONDA_PROMPT_MODIFIER=(base) '
+++++ CONDA_PROMPT_MODIFIER='(base) '
++++ '[' 0 '!=' 0 ']'
++++ __conda_hashr
++++ '[' -n '' ']'
++++ '[' -n '' ']'
++++ hash -r
+++ unset __conda_setup
+++ alias 'ls=ls --color=auto'
+++ force_color_prompt=yes
+++ export CLASSPATH=/home/billyli/data_folder/piedpaper/PreSumm/stanford-corenlp-4.2.0/stanford-corenlp-4.2.0.jar
+++ CLASSPATH=/home/billyli/data_folder/piedpaper/PreSumm/stanford-corenlp-4.2.0/stanford-corenlp-4.2.0.jar
+++ export CUDA_HOME=/usr/local/cuda
+++ CUDA_HOME=/usr/local/cuda
+++ export PATH=/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
+++ PATH=/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
+++ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/lib64:
+++ LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/lib64:
++ conda init
++ '[' 1 -lt 1 ']'
++ local cmd=init
++ shift
++ case "$cmd" in
++ CONDA_INTERNAL_OLDPATH=/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++ __add_sys_prefix_to_path
++ '[' -n '' ']'
+++ dirname /jet/home/billyli/anaconda3/bin/conda
++ SYSP=/jet/home/billyli/anaconda3/bin
+++ dirname /jet/home/billyli/anaconda3/bin
++ SYSP=/jet/home/billyli/anaconda3
++ '[' -n '' ']'
++ PATH=/jet/home/billyli/anaconda3/bin:/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++ export PATH
++ /jet/home/billyli/anaconda3/bin/conda init
+no change     /jet/home/billyli/anaconda3/condabin/conda
+no change     /jet/home/billyli/anaconda3/bin/conda
+no change     /jet/home/billyli/anaconda3/bin/conda-env
+no change     /jet/home/billyli/anaconda3/bin/activate
+no change     /jet/home/billyli/anaconda3/bin/deactivate
+no change     /jet/home/billyli/anaconda3/etc/profile.d/conda.sh
+no change     /jet/home/billyli/anaconda3/etc/fish/conf.d/conda.fish
+no change     /jet/home/billyli/anaconda3/shell/condabin/Conda.psm1
+no change     /jet/home/billyli/anaconda3/shell/condabin/conda-hook.ps1
+no change     /jet/home/billyli/anaconda3/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /jet/home/billyli/anaconda3/etc/profile.d/conda.csh
+no change     /jet/home/billyli/.bashrc
+No action taken.
++ local t1=0
++ PATH=/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++ return 0
++ conda activate diffuse
++ '[' 2 -lt 1 ']'
++ local cmd=activate
++ shift
++ case "$cmd" in
++ __conda_activate activate diffuse
++ '[' -n '' ']'
++ local cmd=activate
++ shift
++ local ask_conda
++ CONDA_INTERNAL_OLDPATH=/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++ __add_sys_prefix_to_path
++ '[' -n '' ']'
+++ dirname /jet/home/billyli/anaconda3/bin/conda
++ SYSP=/jet/home/billyli/anaconda3/bin
+++ dirname /jet/home/billyli/anaconda3/bin
++ SYSP=/jet/home/billyli/anaconda3
++ '[' -n '' ']'
++ PATH=/jet/home/billyli/anaconda3/bin:/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++ export PATH
+++ PS1='(base) [\u@\h \W]\$ '
+++ /jet/home/billyli/anaconda3/bin/conda shell.posix activate diffuse
++ ask_conda='PS1='\''(diffuse) [\u@\h \W]\$ '\''
+export PATH='\''/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/envs/diffuse/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin'\''
+export CONDA_PREFIX='\''/jet/home/billyli/anaconda3/envs/diffuse'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''diffuse'\''
+export CONDA_PROMPT_MODIFIER='\''(diffuse) '\''
+export CONDA_EXE='\''/jet/home/billyli/anaconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/jet/home/billyli/anaconda3/bin/python'\''
+export CONDA_PREFIX_1='\''/jet/home/billyli/anaconda3'\'''
++ rc=0
++ PATH=/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
++ eval 'PS1='\''(diffuse) [\u@\h \W]\$ '\''
+export PATH='\''/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/envs/diffuse/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin'\''
+export CONDA_PREFIX='\''/jet/home/billyli/anaconda3/envs/diffuse'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''diffuse'\''
+export CONDA_PROMPT_MODIFIER='\''(diffuse) '\''
+export CONDA_EXE='\''/jet/home/billyli/anaconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/jet/home/billyli/anaconda3/bin/python'\''
+export CONDA_PREFIX_1='\''/jet/home/billyli/anaconda3'\'''
+++ PS1='(diffuse) [\u@\h \W]\$ '
+++ export PATH=/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/envs/diffuse/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
+++ PATH=/usr/local/cuda/bin:/opt/packages/psc.allocations.user/bin:/opt/packages/allocations/bin:/usr/local/cuda/bin:/jet/home/billyli/anaconda3/envs/diffuse/bin:/jet/home/billyli/anaconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/packages/interact/bin:/opt/puppetlabs/bin:/jet/home/billyli/.local/bin:/jet/home/billyli/bin
+++ export CONDA_PREFIX=/jet/home/billyli/anaconda3/envs/diffuse
+++ CONDA_PREFIX=/jet/home/billyli/anaconda3/envs/diffuse
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=diffuse
+++ CONDA_DEFAULT_ENV=diffuse
+++ export 'CONDA_PROMPT_MODIFIER=(diffuse) '
+++ CONDA_PROMPT_MODIFIER='(diffuse) '
+++ export CONDA_EXE=/jet/home/billyli/anaconda3/bin/conda
+++ CONDA_EXE=/jet/home/billyli/anaconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/jet/home/billyli/anaconda3/bin/python
+++ CONDA_PYTHON_EXE=/jet/home/billyli/anaconda3/bin/python
+++ export CONDA_PREFIX_1=/jet/home/billyli/anaconda3
+++ CONDA_PREFIX_1=/jet/home/billyli/anaconda3
++ '[' 0 '!=' 0 ']'
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /jet/home/billyli/mmmu_NoOps/mmmu
++ python extract_attention_scores.py --output_dir=sbatch_results_attn --noop=all
+Loading Dataset
+all
+Loading MMMU dataset from MMMU/MMMU for split=validation ...
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:02<01:19,  2.76s/it]
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:   3%|▎         | 1/30 [00:01<00:38,  1.34s/ examples][A
+Map:  10%|█         | 3/30 [00:01<00:12,  2.22 examples/s][A
+Map:  13%|█▎        | 4/30 [00:01<00:09,  2.76 examples/s][A
+Map:  23%|██▎       | 7/30 [00:01<00:03,  5.85 examples/s][A
+Map:  30%|███       | 9/30 [00:02<00:03,  5.73 examples/s][A
+Map:  37%|███▋      | 11/30 [00:02<00:02,  6.76 examples/s][A
+Map:  43%|████▎     | 13/30 [00:02<00:02,  7.11 examples/s][A
+Map:  47%|████▋     | 14/30 [00:02<00:02,  6.56 examples/s][A
+Map:  50%|█████     | 15/30 [00:03<00:02,  6.40 examples/s][A
+Map:  53%|█████▎    | 16/30 [00:03<00:02,  6.94 examples/s][A
+Map:  57%|█████▋    | 17/30 [00:03<00:01,  7.03 examples/s][A
+Map:  60%|██████    | 18/30 [00:03<00:01,  7.13 examples/s][A
+Map:  63%|██████▎   | 19/30 [00:03<00:01,  7.55 examples/s][A
+Map:  67%|██████▋   | 20/30 [00:03<00:01,  6.52 examples/s][A
+Map:  73%|███████▎  | 22/30 [00:04<00:01,  7.21 examples/s][A
+Map:  80%|████████  | 24/30 [00:04<00:00,  7.27 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:04<00:00,  8.16 examples/s][A
+Map:  93%|█████████▎| 28/30 [00:04<00:00,  7.82 examples/s][A
+Map:  97%|█████████▋| 29/30 [00:05<00:00,  6.94 examples/s][A
+Map: 100%|██████████| 30/30 [00:05<00:00,  6.93 examples/s][AMap: 100%|██████████| 30/30 [00:05<00:00,  5.51 examples/s]
+  7%|▋         | 2/30 [00:09<02:30,  5.39s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][A
+Generating dev split: 100%|██████████| 5/5 [00:00<00:00,  8.02 examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00,  7.77 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 5448.80 examples/s]
+
+Generating test split:   0%|          | 0/551 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 551/551 [00:00<00:00, 18364.35 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  17%|█▋        | 5/30 [00:00<00:00, 41.92 examples/s][A
+Map:  33%|███▎      | 10/30 [00:00<00:00, 34.52 examples/s][A
+Map:  47%|████▋     | 14/30 [00:00<00:00, 32.75 examples/s][A
+Map:  63%|██████▎   | 19/30 [00:00<00:00, 33.36 examples/s][A
+Map:  77%|███████▋  | 23/30 [00:00<00:00, 28.09 examples/s][A
+Map:  90%|█████████ | 27/30 [00:00<00:00, 27.90 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 27.51 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 29.62 examples/s]
+ 10%|█         | 3/30 [00:13<01:58,  4.39s/it] 13%|█▎        | 4/30 [00:14<01:17,  3.00s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 335.41 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 455.30 examples/s]
+
+Generating test split:   0%|          | 0/429 [00:00<?, ? examples/s][A
+Generating test split:  23%|██▎       | 100/429 [00:00<00:01, 219.79 examples/s][A
+Generating test split:  47%|████▋     | 200/429 [00:00<00:00, 378.51 examples/s][A
+Generating test split:  73%|███████▎  | 315/429 [00:00<00:00, 348.76 examples/s][A
+Generating test split: 100%|██████████| 429/429 [00:01<00:00, 442.45 examples/s][AGenerating test split: 100%|██████████| 429/429 [00:01<00:00, 389.34 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:   3%|▎         | 1/30 [00:00<00:04,  6.24 examples/s][A
+Map:  13%|█▎        | 4/30 [00:00<00:02, 10.26 examples/s][A
+Map:  20%|██        | 6/30 [00:00<00:02, 10.75 examples/s][A
+Map:  27%|██▋       | 8/30 [00:00<00:01, 11.68 examples/s][A
+Map:  37%|███▋      | 11/30 [00:00<00:01, 14.26 examples/s][A
+Map:  43%|████▎     | 13/30 [00:01<00:01, 12.81 examples/s][A
+Map:  50%|█████     | 15/30 [00:01<00:01, 13.24 examples/s][A
+Map:  57%|█████▋    | 17/30 [00:01<00:01,  7.69 examples/s][A
+Map:  63%|██████▎   | 19/30 [00:01<00:01,  8.64 examples/s][A
+Map:  70%|███████   | 21/30 [00:02<00:00, 10.23 examples/s][A
+Map:  77%|███████▋  | 23/30 [00:02<00:00, 10.42 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:02<00:00, 12.85 examples/s][A
+Map:  93%|█████████▎| 28/30 [00:02<00:00, 12.99 examples/s][A
+Map: 100%|██████████| 30/30 [00:02<00:00, 14.11 examples/s][AMap: 100%|██████████| 30/30 [00:02<00:00, 11.48 examples/s]
+ 17%|█▋        | 5/30 [00:21<01:53,  4.53s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 636.02 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 2141.23 examples/s]
+
+Generating test split:   0%|          | 0/326 [00:00<?, ? examples/s][A
+Generating test split:  31%|███       | 100/326 [00:00<00:00, 958.80 examples/s][AGenerating test split: 100%|██████████| 326/326 [00:00<00:00, 1923.26 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  13%|█▎        | 4/30 [00:00<00:01, 21.49 examples/s][A
+Map:  23%|██▎       | 7/30 [00:00<00:01, 13.24 examples/s][A
+Map:  33%|███▎      | 10/30 [00:00<00:01, 15.45 examples/s][A
+Map:  40%|████      | 12/30 [00:00<00:01, 12.31 examples/s][A
+Map:  57%|█████▋    | 17/30 [00:01<00:00, 19.28 examples/s][A
+Map:  70%|███████   | 21/30 [00:01<00:00, 21.68 examples/s][A
+Map:  83%|████████▎ | 25/30 [00:01<00:00, 21.57 examples/s][A
+Map: 100%|██████████| 30/30 [00:02<00:00, 10.45 examples/s][AMap: 100%|██████████| 30/30 [00:02<00:00, 13.47 examples/s]
+ 20%|██        | 6/30 [00:25<01:44,  4.36s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 744.83 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 839.54 examples/s]
+
+Generating test split:   0%|          | 0/345 [00:00<?, ? examples/s][A
+Generating test split: 100%|██████████| 345/345 [00:00<00:00, 2259.22 examples/s][AGenerating test split: 100%|██████████| 345/345 [00:00<00:00, 2227.69 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  10%|█         | 3/30 [00:00<00:01, 22.36 examples/s][A
+Map:  23%|██▎       | 7/30 [00:00<00:00, 27.52 examples/s][A
+Map:  40%|████      | 12/30 [00:00<00:00, 18.84 examples/s][A
+Map:  53%|█████▎    | 16/30 [00:00<00:00, 21.89 examples/s][A
+Map:  63%|██████▎   | 19/30 [00:00<00:00, 23.10 examples/s][A
+Map:  77%|███████▋  | 23/30 [00:01<00:00, 22.96 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:01<00:00, 19.21 examples/s][A
+Map:  97%|█████████▋| 29/30 [00:01<00:00, 15.60 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 18.62 examples/s]
+ 23%|██▎       | 7/30 [00:29<01:36,  4.21s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 909.47 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 4315.87 examples/s]
+
+Generating test split:   0%|          | 0/603 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 603/603 [00:00<00:00, 16132.45 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  20%|██        | 6/30 [00:00<00:00, 46.22 examples/s][A
+Map:  37%|███▋      | 11/30 [00:00<00:00, 42.17 examples/s][A
+Map:  57%|█████▋    | 17/30 [00:00<00:00, 21.24 examples/s][A
+Map:  73%|███████▎  | 22/30 [00:00<00:00, 24.78 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:01<00:00, 24.19 examples/s][A
+Map:  97%|█████████▋| 29/30 [00:01<00:00, 24.04 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 25.18 examples/s]
+ 27%|██▋       | 8/30 [00:31<01:18,  3.57s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 606.29 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Generating validation split: 100%|██████████| 30/30 [00:00<00:00, 36.48 examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 36.45 examples/s]
+
+Generating test split:   0%|          | 0/325 [00:00<?, ? examples/s][A
+Generating test split:  31%|███       | 100/325 [00:00<00:00, 619.41 examples/s][A
+Generating test split:  92%|█████████▏| 300/325 [00:00<00:00, 1243.37 examples/s][AGenerating test split: 100%|██████████| 325/325 [00:00<00:00, 1195.07 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  10%|█         | 3/30 [00:00<00:01, 16.52 examples/s][A
+Map:  23%|██▎       | 7/30 [00:00<00:00, 23.63 examples/s][A
+Map:  37%|███▋      | 11/30 [00:00<00:00, 21.96 examples/s][A
+Map:  53%|█████▎    | 16/30 [00:00<00:00, 22.34 examples/s][A
+Map:  67%|██████▋   | 20/30 [00:00<00:00, 22.93 examples/s][A
+Map:  80%|████████  | 24/30 [00:01<00:00, 24.66 examples/s][A
+Map:  90%|█████████ | 27/30 [00:01<00:00, 24.30 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 25.26 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 23.63 examples/s]
+ 30%|███       | 9/30 [00:35<01:16,  3.64s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][A
+Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 11.46 examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 11.43 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 4476.63 examples/s]
+
+Generating test split:   0%|          | 0/371 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 371/371 [00:00<00:00, 10341.10 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  13%|█▎        | 4/30 [00:00<00:00, 31.79 examples/s][A
+Map:  27%|██▋       | 8/30 [00:00<00:00, 32.12 examples/s][A
+Map:  43%|████▎     | 13/30 [00:00<00:01, 16.57 examples/s][A
+Map:  60%|██████    | 18/30 [00:00<00:00, 21.96 examples/s][A
+Map:  73%|███████▎  | 22/30 [00:00<00:00, 24.94 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:01<00:00, 26.09 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 22.79 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 22.96 examples/s]
+ 33%|███▎      | 10/30 [00:38<01:08,  3.41s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 507.61 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 303.81 examples/s]
+
+Generating test split:   0%|          | 0/169 [00:00<?, ? examples/s][A
+Generating test split:  59%|█████▉    | 100/169 [00:00<00:00, 414.77 examples/s][AGenerating test split: 100%|██████████| 169/169 [00:00<00:00, 660.61 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  13%|█▎        | 4/30 [00:00<00:01, 23.21 examples/s][A
+Map:  27%|██▋       | 8/30 [00:00<00:00, 22.62 examples/s][A
+Map:  40%|████      | 12/30 [00:00<00:00, 19.63 examples/s][A
+Map:  50%|█████     | 15/30 [00:00<00:01, 13.82 examples/s][A
+Map:  63%|██████▎   | 19/30 [00:01<00:00, 17.56 examples/s][A
+Map:  73%|███████▎  | 22/30 [00:01<00:00, 14.73 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:01<00:00, 17.43 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 19.78 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 18.03 examples/s]
+ 37%|███▋      | 11/30 [00:41<01:05,  3.46s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 612.00 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 333.69 examples/s]
+
+Generating test split:   0%|          | 0/162 [00:00<?, ? examples/s][A
+Generating test split:  62%|██████▏   | 100/162 [00:00<00:00, 238.96 examples/s][A
+Generating test split: 100%|██████████| 162/162 [00:00<00:00, 250.55 examples/s][AGenerating test split: 100%|██████████| 162/162 [00:00<00:00, 247.58 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:   3%|▎         | 1/30 [00:00<00:03,  8.68 examples/s][A
+Map:  10%|█         | 3/30 [00:00<00:02,  9.88 examples/s][A
+Map:  23%|██▎       | 7/30 [00:00<00:01, 14.63 examples/s][A
+Map:  30%|███       | 9/30 [00:00<00:01, 14.89 examples/s][A
+Map:  37%|███▋      | 11/30 [00:00<00:01, 15.53 examples/s][A
+Map:  47%|████▋     | 14/30 [00:01<00:01, 11.72 examples/s][A
+Map:  60%|██████    | 18/30 [00:01<00:00, 14.75 examples/s][A
+Map:  67%|██████▋   | 20/30 [00:01<00:00, 11.50 examples/s][A
+Map:  80%|████████  | 24/30 [00:01<00:00, 15.16 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:01<00:00, 12.35 examples/s][A
+Map:  93%|█████████▎| 28/30 [00:02<00:00, 13.13 examples/s][A
+Map: 100%|██████████| 30/30 [00:02<00:00, 13.95 examples/s][AMap: 100%|██████████| 30/30 [00:02<00:00, 13.34 examples/s]
+ 40%|████      | 12/30 [00:46<01:09,  3.87s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 963.41 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 5156.09 examples/s]
+
+Generating test split:   0%|          | 0/267 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 267/267 [00:00<00:00, 3251.95 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  10%|█         | 3/30 [00:00<00:01, 22.21 examples/s][A
+Map:  30%|███       | 9/30 [00:00<00:00, 38.89 examples/s][A
+Map:  47%|████▋     | 14/30 [00:00<00:00, 41.11 examples/s][A
+Map:  67%|██████▋   | 20/30 [00:00<00:00, 36.03 examples/s][A
+Map:  80%|████████  | 24/30 [00:00<00:00, 35.85 examples/s][A
+Map:  93%|█████████▎| 28/30 [00:00<00:00, 27.90 examples/s][AMap: 100%|██████████| 30/30 [00:00<00:00, 31.53 examples/s]
+ 43%|████▎     | 13/30 [00:48<00:55,  3.24s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1181.29 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 7487.15 examples/s]
+
+Generating test split:   0%|          | 0/256 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 256/256 [00:00<00:00, 21055.00 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  20%|██        | 6/30 [00:00<00:00, 39.70 examples/s][A
+Map:  37%|███▋      | 11/30 [00:00<00:00, 41.39 examples/s][A
+Map:  53%|█████▎    | 16/30 [00:00<00:00, 32.69 examples/s][A
+Map:  70%|███████   | 21/30 [00:00<00:00, 32.81 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:00<00:00, 34.47 examples/s][AMap: 100%|██████████| 30/30 [00:00<00:00, 35.35 examples/s]
+ 47%|████▋     | 14/30 [00:50<00:45,  2.84s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1010.29 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 4311.58 examples/s]
+
+Generating test split:   0%|          | 0/432 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 432/432 [00:00<00:00, 16143.01 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  20%|██        | 6/30 [00:00<00:00, 43.75 examples/s][A
+Map:  40%|████      | 12/30 [00:00<00:00, 42.41 examples/s][A
+Map:  57%|█████▋    | 17/30 [00:00<00:00, 36.40 examples/s][A
+Map:  70%|███████   | 21/30 [00:00<00:00, 17.98 examples/s][A
+Map:  83%|████████▎ | 25/30 [00:01<00:00, 20.64 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 25.30 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 25.84 examples/s]
+ 50%|█████     | 15/30 [00:52<00:40,  2.71s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1112.25 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 5431.39 examples/s]
+
+Generating test split:   0%|          | 0/355 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 355/355 [00:00<00:00, 19245.40 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  17%|█▋        | 5/30 [00:00<00:00, 36.05 examples/s][A
+Map:  30%|███       | 9/30 [00:00<00:00, 32.12 examples/s][A
+Map:  47%|████▋     | 14/30 [00:00<00:00, 31.89 examples/s][A
+Map:  60%|██████    | 18/30 [00:00<00:00, 33.02 examples/s][A
+Map:  80%|████████  | 24/30 [00:00<00:00, 37.75 examples/s][A
+Map:  93%|█████████▎| 28/30 [00:00<00:00, 36.84 examples/s][AMap: 100%|██████████| 30/30 [00:00<00:00, 35.57 examples/s]
+ 53%|█████▎    | 16/30 [00:54<00:33,  2.37s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 26.36 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 2343.80 examples/s]
+
+Generating test split:   0%|          | 0/565 [00:00<?, ? examples/s][A
+Generating test split:  88%|████████▊ | 500/565 [00:00<00:00, 3855.55 examples/s][AGenerating test split: 100%|██████████| 565/565 [00:00<00:00, 4038.89 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  13%|█▎        | 4/30 [00:00<00:01, 24.07 examples/s][A
+Map:  37%|███▋      | 11/30 [00:00<00:00, 37.30 examples/s][A
+Map:  53%|█████▎    | 16/30 [00:00<00:00, 25.51 examples/s][A
+Map:  70%|███████   | 21/30 [00:00<00:00, 28.78 examples/s][A
+Map:  83%|████████▎ | 25/30 [00:00<00:00, 29.42 examples/s][A
+Map: 100%|██████████| 30/30 [00:00<00:00, 32.15 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 29.78 examples/s]
+ 57%|█████▋    | 17/30 [00:57<00:32,  2.51s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 114.73 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 988.26 examples/s]
+
+Generating test split:   0%|          | 0/278 [00:00<?, ? examples/s][A
+Generating test split:  36%|███▌      | 100/278 [00:00<00:00, 827.14 examples/s][AGenerating test split: 100%|██████████| 278/278 [00:00<00:00, 1725.42 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  13%|█▎        | 4/30 [00:00<00:03,  8.11 examples/s][A
+Map:  20%|██        | 6/30 [00:00<00:02, 10.67 examples/s][A
+Map:  30%|███       | 9/30 [00:00<00:01, 14.00 examples/s][A
+Map:  40%|████      | 12/30 [00:00<00:01, 15.01 examples/s][A
+Map:  50%|█████     | 15/30 [00:01<00:01, 12.89 examples/s][A
+Map:  60%|██████    | 18/30 [00:01<00:00, 15.00 examples/s][A
+Map:  73%|███████▎  | 22/30 [00:01<00:00, 17.94 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:01<00:00, 20.69 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 22.88 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 16.77 examples/s]
+ 60%|██████    | 18/30 [01:01<00:36,  3.07s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 677.24 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 1353.26 examples/s]
+
+Generating test split:   0%|          | 0/112 [00:00<?, ? examples/s][A
+Generating test split: 100%|██████████| 112/112 [00:00<00:00, 1071.52 examples/s][AGenerating test split: 100%|██████████| 112/112 [00:00<00:00, 1061.47 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  10%|█         | 3/30 [00:00<00:01, 16.89 examples/s][A
+Map:  17%|█▋        | 5/30 [00:00<00:01, 15.38 examples/s][A
+Map:  37%|███▋      | 11/30 [00:00<00:00, 26.27 examples/s][A
+Map:  47%|████▋     | 14/30 [00:00<00:00, 22.20 examples/s][A
+Map:  57%|█████▋    | 17/30 [00:00<00:00, 21.74 examples/s][A
+Map:  67%|██████▋   | 20/30 [00:00<00:00, 21.20 examples/s][A
+Map:  83%|████████▎ | 25/30 [00:01<00:00, 21.49 examples/s][A
+Map:  93%|█████████▎| 28/30 [00:01<00:00, 15.62 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 18.86 examples/s]
+ 63%|██████▎   | 19/30 [01:04<00:32,  2.98s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 915.19 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 3689.57 examples/s]
+
+Generating test split:   0%|          | 0/245 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 245/245 [00:00<00:00, 7050.56 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  10%|█         | 3/30 [00:00<00:02, 10.05 examples/s][A
+Map:  27%|██▋       | 8/30 [00:00<00:01, 18.96 examples/s][A
+Map:  40%|████      | 12/30 [00:00<00:00, 19.99 examples/s][A
+Map:  50%|█████     | 15/30 [00:00<00:00, 19.54 examples/s][A
+Map:  63%|██████▎   | 19/30 [00:00<00:00, 23.23 examples/s][A
+Map:  73%|███████▎  | 22/30 [00:01<00:00, 23.32 examples/s][A
+Map:  93%|█████████▎| 28/30 [00:01<00:00, 28.33 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 22.86 examples/s]
+ 67%|██████▋   | 20/30 [01:06<00:27,  2.74s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1039.38 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 5417.13 examples/s]
+
+Generating test split:   0%|          | 0/181 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 181/181 [00:00<00:00, 12674.79 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  27%|██▋       | 8/30 [00:00<00:00, 67.25 examples/s][A
+Map:  50%|█████     | 15/30 [00:00<00:00, 42.11 examples/s][A
+Map:  70%|███████   | 21/30 [00:00<00:00, 31.28 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:00<00:00, 32.71 examples/s][A
+Map: 100%|██████████| 30/30 [00:00<00:00, 26.61 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 22.85 examples/s]
+ 70%|███████   | 21/30 [01:08<00:23,  2.59s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 891.00 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 2852.30 examples/s]
+
+Generating test split:   0%|          | 0/458 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 458/458 [00:00<00:00, 13062.72 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  13%|█▎        | 4/30 [00:00<00:01, 25.08 examples/s][A
+Map:  30%|███       | 9/30 [00:00<00:00, 33.85 examples/s][A
+Map:  47%|████▋     | 14/30 [00:00<00:00, 21.61 examples/s][A
+Map:  60%|██████    | 18/30 [00:00<00:00, 22.77 examples/s][A
+Map:  73%|███████▎  | 22/30 [00:01<00:00, 20.21 examples/s][A
+Map:  90%|█████████ | 27/30 [00:01<00:00, 24.15 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 22.62 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 22.53 examples/s]
+ 73%|███████▎  | 22/30 [01:11<00:20,  2.60s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 103.92 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 5582.23 examples/s]
+
+Generating test split:   0%|          | 0/505 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 505/505 [00:00<00:00, 15503.30 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  10%|█         | 3/30 [00:00<00:01, 26.79 examples/s][A
+Map:  23%|██▎       | 7/30 [00:00<00:00, 24.71 examples/s][A
+Map:  47%|████▋     | 14/30 [00:00<00:00, 31.19 examples/s][A
+Map:  63%|██████▎   | 19/30 [00:00<00:00, 29.15 examples/s][A
+Map:  77%|███████▋  | 23/30 [00:00<00:00, 29.54 examples/s][A
+Map:  90%|█████████ | 27/30 [00:00<00:00, 25.49 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 26.32 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 27.24 examples/s]
+ 77%|███████▋  | 23/30 [01:15<00:20,  2.97s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][A
+Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 34.56 examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 34.25 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 5448.80 examples/s]
+
+Generating test split:   0%|          | 0/429 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 429/429 [00:00<00:00, 5350.12 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  20%|██        | 6/30 [00:00<00:00, 37.51 examples/s][A
+Map:  47%|████▋     | 14/30 [00:00<00:00, 48.29 examples/s][A
+Map:  63%|██████▎   | 19/30 [00:00<00:00, 40.16 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:00<00:00, 28.16 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 15.65 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 21.48 examples/s]
+ 80%|████████  | 24/30 [01:17<00:17,  2.91s/it]
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:   3%|▎         | 1/30 [00:00<00:06,  4.15 examples/s][A
+Map:  17%|█▋        | 5/30 [00:00<00:01, 13.40 examples/s][A
+Map:  23%|██▎       | 7/30 [00:00<00:02,  9.82 examples/s][A
+Map:  40%|████      | 12/30 [00:00<00:01, 14.93 examples/s][A
+Map:  53%|█████▎    | 16/30 [00:01<00:00, 16.91 examples/s][A
+Map:  67%|██████▋   | 20/30 [00:01<00:00, 20.70 examples/s][A
+Map:  77%|███████▋  | 23/30 [00:01<00:00, 13.39 examples/s][A
+Map:  83%|████████▎ | 25/30 [00:01<00:00, 11.97 examples/s][A
+Map:  90%|█████████ | 27/30 [00:02<00:00, 12.41 examples/s][A
+Map:  97%|█████████▋| 29/30 [00:02<00:00, 13.27 examples/s][AMap: 100%|██████████| 30/30 [00:02<00:00, 13.77 examples/s]
+ 83%|████████▎ | 25/30 [01:20<00:14,  2.85s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 83.42 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 5311.04 examples/s]
+
+Generating test split:   0%|          | 0/430 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 430/430 [00:00<00:00, 12047.93 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  10%|█         | 3/30 [00:00<00:01, 15.81 examples/s][A
+Map:  30%|███       | 9/30 [00:00<00:00, 34.29 examples/s][A
+Map:  47%|████▋     | 14/30 [00:00<00:00, 34.00 examples/s][A
+Map:  67%|██████▋   | 20/30 [00:00<00:00, 36.75 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:00<00:00, 42.48 examples/s][AMap: 100%|██████████| 30/30 [00:00<00:00, 38.34 examples/s]
+ 87%|████████▋ | 26/30 [01:22<00:10,  2.62s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1011.55 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 5929.74 examples/s]
+
+Generating test split:   0%|          | 0/408 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 408/408 [00:00<00:00, 15773.29 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:  17%|█▋        | 5/30 [00:00<00:00, 38.13 examples/s][A
+Map:  30%|███       | 9/30 [00:00<00:00, 38.43 examples/s][A
+Map:  50%|█████     | 15/30 [00:00<00:00, 37.81 examples/s][A
+Map:  70%|███████   | 21/30 [00:00<00:00, 42.30 examples/s][A
+Map:  97%|█████████▋| 29/30 [00:00<00:00, 37.73 examples/s][AMap: 100%|██████████| 30/30 [00:00<00:00, 38.56 examples/s]
+ 90%|█████████ | 27/30 [01:24<00:06,  2.33s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 933.15 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 3509.00 examples/s]
+
+Generating test split:   0%|          | 0/305 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 305/305 [00:00<00:00, 4597.46 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:   3%|▎         | 1/30 [00:00<00:04,  6.90 examples/s][A
+Map:  17%|█▋        | 5/30 [00:00<00:01, 20.25 examples/s][A
+Map:  27%|██▋       | 8/30 [00:00<00:00, 23.62 examples/s][A
+Map:  40%|████      | 12/30 [00:00<00:00, 25.65 examples/s][A
+Map:  57%|█████▋    | 17/30 [00:00<00:00, 21.22 examples/s][A
+Map:  70%|███████   | 21/30 [00:00<00:00, 23.73 examples/s][A
+Map:  83%|████████▎ | 25/30 [00:01<00:00, 25.88 examples/s][A
+Map: 100%|██████████| 30/30 [00:01<00:00, 25.17 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 23.44 examples/s]
+ 93%|█████████▎| 28/30 [01:27<00:05,  2.55s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 342.64 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 5401.78 examples/s]
+
+Generating test split:   0%|          | 0/509 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 509/509 [00:00<00:00, 14372.08 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:   3%|▎         | 1/30 [00:00<00:05,  5.78 examples/s][A
+Map:  27%|██▋       | 8/30 [00:00<00:00, 30.34 examples/s][A
+Map:  43%|████▎     | 13/30 [00:00<00:00, 22.88 examples/s][A
+Map:  60%|██████    | 18/30 [00:00<00:00, 26.82 examples/s][A
+Map:  90%|█████████ | 27/30 [00:00<00:00, 38.04 examples/s][AMap: 100%|██████████| 30/30 [00:00<00:00, 31.31 examples/s]
+ 97%|█████████▋| 29/30 [01:29<00:02,  2.32s/it]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 374.16 examples/s]
+
+Generating validation split:   0%|          | 0/30 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 30/30 [00:00<00:00, 1095.19 examples/s]
+
+Generating test split:   0%|          | 0/252 [00:00<?, ? examples/s][A
+Generating test split:  40%|███▉      | 100/252 [00:00<00:00, 356.90 examples/s][AGenerating test split: 100%|██████████| 252/252 [00:00<00:00, 664.09 examples/s]
+
+Map:   0%|          | 0/30 [00:00<?, ? examples/s][A
+Map:   7%|▋         | 2/30 [00:00<00:01, 17.67 examples/s][A
+Map:  17%|█▋        | 5/30 [00:00<00:01, 19.65 examples/s][A
+Map:  27%|██▋       | 8/30 [00:00<00:01, 20.39 examples/s][A
+Map:  40%|████      | 12/30 [00:00<00:00, 21.33 examples/s][A
+Map:  50%|█████     | 15/30 [00:00<00:00, 18.29 examples/s][A
+Map:  57%|█████▋    | 17/30 [00:01<00:00, 13.77 examples/s][A
+Map:  63%|██████▎   | 19/30 [00:01<00:00, 14.42 examples/s][A
+Map:  77%|███████▋  | 23/30 [00:01<00:00, 17.35 examples/s][A
+Map:  87%|████████▋ | 26/30 [00:01<00:00, 16.42 examples/s][A
+Map:  97%|█████████▋| 29/30 [00:01<00:00, 17.32 examples/s][AMap: 100%|██████████| 30/30 [00:01<00:00, 17.37 examples/s]
+100%|██████████| 30/30 [01:32<00:00,  2.75s/it]100%|██████████| 30/30 [01:32<00:00,  3.10s/it]
+NoOp Dataset loaded: Dataset({
+    features: ['id', 'question', 'options', 'explanation', 'image_1', 'image_2', 'image_3', 'image_4', 'image_5', 'image_6', 'image_7', 'img_type', 'answer', 'topic_difficulty', 'question_type', 'subfield', 'noop', 'noop_imgs'],
+    num_rows: 900
+})
+Example Datapoint: 
+{'id': 'validation_Accounting_1', 'question': '<image 1> Baxter Company has a relevant range of production between 15,000 and 30,000 units. The following cost data represents average variable costs per unit for 25,000 units of production. If 30,000 units are produced, what are the per unit manufacturing overhead costs incurred?', 'options': "['$6', '$7', '$8', '$9']", 'explanation': '', 'image_1': <PIL.PngImagePlugin.PngImageFile image mode=RGBA size=775x279 at 0x1522A0EF2C70>, 'image_2': None, 'image_3': None, 'image_4': None, 'image_5': None, 'image_6': None, 'image_7': None, 'img_type': "['Tables']", 'answer': 'B', 'topic_difficulty': 'Medium', 'question_type': 'multiple-choice', 'subfield': 'Managerial Accounting', 'noop': "<image 1> Baxter Company has a relevant range of production between 15,000 and 30,000 units. the company's CEO is planning a vacation to Hawaii. The following cost data represents average variable costs per unit for 25,000 units of production. If 30,000 units are produced, what are the per unit manufacturing overhead costs incurred?", 'noop_imgs': True}
+Loading Model
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:24<01:14, 24.77s/it]Fetching 4 files:  75%|███████▌  | 3/4 [00:27<00:07,  7.40s/it]Fetching 4 files: 100%|██████████| 4/4 [00:27<00:00,  6.85s/it]
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  2.46it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.14s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.37s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.01it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.03s/it]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+formatting prompts
+Example formatted sample
+{'id': 'validation_Accounting_1', 'question': '<image 1> Baxter Company has a relevant range of production between 15,000 and 30,000 units. The following cost data represents average variable costs per unit for 25,000 units of production. If 30,000 units are produced, what are the per unit manufacturing overhead costs incurred?', 'options': "['$6', '$7', '$8', '$9']", 'explanation': '', 'image_1': <PIL.PngImagePlugin.PngImageFile image mode=RGBA size=775x279 at 0x152222CC9820>, 'image_2': None, 'image_3': None, 'image_4': None, 'image_5': None, 'image_6': None, 'image_7': None, 'img_type': "['Tables']", 'answer': 'B', 'topic_difficulty': 'Medium', 'question_type': 'multiple-choice', 'subfield': 'Managerial Accounting', 'noop': "<image 1> Baxter Company has a relevant range of production between 15,000 and 30,000 units. the company's CEO is planning a vacation to Hawaii. The following cost data represents average variable costs per unit for 25,000 units of production. If 30,000 units are produced, what are the per unit manufacturing overhead costs incurred?", 'noop_imgs': True, 'noop_warning': False, 'images': ['<image 1>'], 'final_input_prompt_base': [{'role': 'user', 'content': [{'type': 'text', 'text': 'you are an advanced logical AI who is tasked to answer all questions accurately and briefly. For multiple choice questions, please only reply with a single letter for your answer choice.'}, {'type': 'image'}, {'type': 'text', 'text': ' Baxter Company has a relevant range of production between 15,000 and 30,000 units. The following cost data represents average variable costs per unit for 25,000 units of production. If 30,000 units are produced, what are the per unit manufacturing overhead costs incurred?'}, {'type': 'text', 'text': 'Your options are: '}, {'type': 'text', 'text': 'A) '}, {'type': 'text', 'text': '$6'}, {'type': 'text', 'text': 'B) '}, {'type': 'text', 'text': '$7'}, {'type': 'text', 'text': 'C) '}, {'type': 'text', 'text': '$8'}, {'type': 'text', 'text': 'D) '}, {'type': 'text', 'text': '$9'}]}], 'final_input_prompt_noop': [{'role': 'user', 'content': [{'type': 'text', 'text': 'you are an advanced logical AI who is tasked to answer all questions accurately and briefly. For multiple choice questions, please only reply with a single letter for your answer choice.'}, {'type': 'image'}, {'type': 'text', 'text': " Baxter Company has a relevant range of production between 15,000 and 30,000 units. the company's CEO is planning a vacation to Hawaii. The following cost data represents average variable costs per unit for 25,000 units of production. If 30,000 units are produced, what are the per unit manufacturing overhead costs incurred?"}, {'type': 'text', 'text': 'Your options are: '}, {'type': 'text', 'text': 'A) '}, {'type': 'text', 'text': '$6'}, {'type': 'text', 'text': 'B) '}, {'type': 'text', 'text': '$7'}, {'type': 'text', 'text': 'C) '}, {'type': 'text', 'text': '$8'}, {'type': 'text', 'text': 'D) '}, {'type': 'text', 'text': '$9'}]}]}
+running model
+  0%|          | 0/900 [00:00<?, ?it/s]`torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to eager attention. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+  0%|          | 1/900 [00:23<5:52:23, 23.52s/it]  0%|          | 2/900 [00:24<2:35:44, 10.41s/it]  0%|          | 3/900 [00:25<1:29:54,  6.01s/it]  0%|          | 4/900 [00:30<1:26:31,  5.79s/it]  1%|          | 5/900 [00:36<1:25:59,  5.76s/it]  1%|          | 5/900 [00:38<1:53:44,  7.63s/it]
+Traceback (most recent call last):
+  File "/jet/home/billyli/mmmu_NoOps/mmmu/extract_attention_scores.py", line 479, in <module>
+    main()
+  File "/jet/home/billyli/mmmu_NoOps/mmmu/extract_attention_scores.py", line 462, in main
+    out_samples = extract_attention(
+  File "/jet/home/billyli/mmmu_NoOps/mmmu/extract_attention_scores.py", line 233, in extract_attention
+    attn = torch.stack(output.attentions).detach().cpu()
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 18.62 GiB. GPU 0 has a total capacity of 79.21 GiB of which 12.66 GiB is free. Including non-PyTorch memory, this process has 66.54 GiB memory in use. Of the allocated memory 34.91 GiB is allocated by PyTorch, and 30.96 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
++ ./gpua.out
+/var/spool/slurm/d/job30279411/slurm_script: line 28: ./gpua.out: No such file or directory
