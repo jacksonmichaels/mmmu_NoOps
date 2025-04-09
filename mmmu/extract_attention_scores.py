@@ -96,7 +96,7 @@ def load_dataset(noop='all'):
     return dataset
 
 def load_model(model_name, device="cuda:0"):
-    model_id = "llava-hf/llava-onevision-qwen2-7b-ov-hf"
+    model_id = "llava-hf/llava-onevision-qwen2-0.5b-ov-hf"
     model = LlavaOnevisionForConditionalGeneration.from_pretrained(
         model_id,
         torch_dtype=torch.float16,
@@ -106,6 +106,7 @@ def load_model(model_name, device="cuda:0"):
         model_id,
         trust_remote_code=True
     )
+    model.eval()
     return processor, model
 
 
@@ -216,69 +217,73 @@ def final_selection_mask(B, inserted_indices, target=151646):
     #   - (indices < ins_start) | (indices >= ins_end) ensures the token is not in the inserted section.
     mask = (B != target) & ((indices < ins_start) | (indices >= ins_end))
     return mask
+import gc
 
-def extract_attention(dset, model, processor, out_dir,store_all=False,layers=None,device="cuda:0"):
+def extract_attention(dset, model, processor, out_dir, store_all=False, layers=None, device="cuda:0"):
     out_samples = {}
     with torch.no_grad():
-        for sample in tqdm(dset):
-
-            base = sample_to_model_inputs(sample, sample['final_input_prompt_base'], processor).to(device)
-            noop = sample_to_model_inputs(sample, sample['final_input_prompt_noop'], processor).to(device)
-            noop_indices = find_inserted_section_indices(base.input_ids[0], noop.input_ids[0])
-            img_segments = find_target_segments(noop.input_ids[0])
-            
-            output = model(**noop,output_attentions=True)
-            logits = output.logits[0, -1] # get the logit of the last token
-            top_logit = torch.argmax(logits)
-            attn = torch.stack(output.attentions).detach().cpu()
-            
-            attn_path_folder = os.path.join(
-                # "/scratch/workspace/jacksonmicha_umass_edu-attention_scores/attention_scores",
-                out_dir, "attention_scores"
-            )
-
-            os.makedirs(attn_path_folder, exist_ok=True)
-            attn_path = os.path.join(attn_path_folder, sample['id'] + ".pt")
-            # async_save(attn, attn_path)
-
-            if not store_all:
-                color_idx, shape_idx = (1560, 1561)
-                shape_range = (3, 1488)
-                img_attn = 0
-                for segment in img_segments:
-                    img_attn += attn[:, 0, :, -1, segment[0]:segment[1]].mean(dim=2)
-                noop_attn = attn[:, 0, :, -1, noop_indices[0]:noop_indices[1]].mean(dim=2)
-
-                not_noop_mask = final_selection_mask(noop.input_ids[0], noop_indices)
+        with tqdm(dset) as pbar:
+            for sample in pbar:
+                # Get current GPU memory usage and update progress bar description
+                mem_used = torch.cuda.memory_allocated(0) / torch.cuda.get_device_properties(0).total_memory * 100
+                pbar.set_description(f"GPU Mem: {mem_used:.1f}%")
                 
-                txt_attn = attn[:, 0, :, -1, noop_indices].mean(dim=2)
-                stacked = torch.stack([img_attn, noop_attn, txt_attn])
-                torch.save(stacked, attn_path)
-            else:
-                if layers is not None:
-                    torch.save(attn[:,0,layers,:,:], attn_path)
+                # Prepare model inputs and move to GPU
+                base = sample_to_model_inputs(sample, sample['final_input_prompt_base'], processor).to(device)
+                noop = sample_to_model_inputs(sample, sample['final_input_prompt_noop'], processor).to(device)
+                noop_indices = find_inserted_section_indices(base.input_ids[0], noop.input_ids[0])
+                img_segments = find_target_segments(noop.input_ids[0])
+                
+                # Run model forward pass with output_attentions enabled
+                output = model(**noop, output_attentions=True)
+                
+                # Process logits and move them to CPU
+                logits = output.logits[0, -1].detach().cpu()
+                top_logit = torch.argmax(logits)
+                
+                # Instead of stacking all GPU attention outputs at once,
+                # individually detach and move each attention tensor to the CPU.
+                attn_list = [att.detach().cpu() for att in output.attentions]
+                # Optionally stack if a tensor is required for further processing on CPU.
+                attn = torch.stack(attn_list)
+    
+                # Prepare directory for saving attention results.
+                attn_path_folder = os.path.join(out_dir, "attention_scores")
+                os.makedirs(attn_path_folder, exist_ok=True)
+                attn_path = os.path.join(attn_path_folder, sample['id'] + ".pt")
+                
+                if not store_all:
+                    # Process the attention tensors
+                    # (Keep the original indexing if it matches the model dimensions)
+                    img_attn = 0
+                    for segment in img_segments:
+                        img_attn += attn[:, 0, :, -1, segment[0]:segment[1]].mean(dim=2)
+                    noop_attn = attn[:, 0, :, -1, noop_indices[0]:noop_indices[1]].mean(dim=2)
+                    txt_attn = attn[:, 0, :, -1, noop_indices].mean(dim=2)
+                    stacked = torch.stack([img_attn, noop_attn, txt_attn])
+                    torch.save(stacked, attn_path)
                 else:
-                    torch.save(attn[:,0,layers,:,:], attn_path)
-            
-            predicted_token_id = logits.argmax().item()
-            predicted_token_str = processor.decode(predicted_token_id, skip_special_tokens=True, clean_up_tokenization_spaces=False)
-            # print(logits)
-            # print(top_logit)
-            # print(stacked.shape)
-            pred_ans = processor.batch_decode([top_logit])
-            
-            temp = {
-                "id": sample['id'],
-                "predicted_ans": pred_ans,
-                "real_ans": sample['answer'],
-                "attn_path": attn_path
-            }
-            
-            temp['is_correct'] = pred_ans == sample['answer']
+                    if layers is not None:
+                        torch.save(attn[:, 0, layers, :, :], attn_path)
+                    else:
+                        torch.save(attn[:, 0, layers, :, :], attn_path)
                 
-            out_samples[sample['id']] = temp
-            # break
+                pred_ans = processor.batch_decode([top_logit])
+                temp = {
+                    "id": sample['id'],
+                    "predicted_ans": pred_ans,
+                    "real_ans": sample['answer'],
+                    "attn_path": attn_path,
+                    "is_correct": pred_ans == sample['answer']
+                }
+                out_samples[sample['id']] = temp
+    
+                # Delete local variables to free GPU memory and prompt garbage collection.
+                del base, noop, output, attn, logits, attn_list
+                torch.cuda.empty_cache()
+                gc.collect()
     return out_samples
+
 
 
 def set_seed(seed_value):
