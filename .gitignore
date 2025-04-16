@@ -2,4 +2,5 @@
 *.ipynb_checkpoints*
 mmmu/results/*
 mmmu/model_weights/*
-
+mmmu/sbatch_results_attn/
+mmmu/mem_leak_testing/

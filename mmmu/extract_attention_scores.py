@@ -98,7 +98,7 @@ def load_dataset(noop='all'):
     return dataset
 
 def load_model(model_name, device="cuda:0"):
-    model_id = "llava-hf/llava-onevision-qwen2-0.5b-ov-hf"
+    model_id = "llava-hf/llava-onevision-qwen2-7b-ov-hf"
     model = LlavaOnevisionForConditionalGeneration.from_pretrained(
         model_id,
         torch_dtype=torch.float16,
@@ -370,66 +370,75 @@ def construct_prompt_l1(sample):
     sample["final_input_prompt_noop"] = [response]
     return sample
     
-def extract_attention(dset, model, processor, out_dir,store_all=False,layers=None,device="cuda:0"):
+def extract_attention(dset, model, processor, out_dir, store_all=False, layers=None, device="cuda:0"):
     out_samples = {}
     layers = model.language_model.model.layers
+
     with torch.no_grad():
         with tqdm(dset) as pbar:
             for sample in pbar:
-                # print("=========================================")
-                # print(sample)
-                base = sample_to_model_inputs(sample, sample['final_input_prompt_base'], processor)
-                noop = sample_to_model_inputs(sample, sample['final_input_prompt_noop'], processor)
-                noop_indices = find_inserted_section_indices(base.input_ids[0], noop.input_ids[0])
-                img_segments = find_target_segments(noop.input_ids[0])
-                final_mask = final_selection_mask(noop.input_ids[0], noop_indices)
-                
-                for layer in layers:
-                    layer.self_attn.noop_indices = noop_indices
-                    layer.self_attn.img_segments = img_segments
-                    layer.self_attn.not_noop_mask = final_mask
-                    
-                output = model(**noop.to(device),output_attentions=False)
-                
-                # return
-                logits = output.logits.detach().cpu()[0, -1] # get the logit of the last token
-                top_logit = torch.argmax(logits)
-                attn_list = [layer.self_attn.attn.detach().cpu() for layer in layers]
-                attn = torch.stack(attn_list)
-                
-                attn_path_folder = os.path.join(
-                    # "/scratch/workspace/jacksonmicha_umass_edu-attention_scores/attention_scores",
-                    out_dir, "attention_scores"
-                )
-    
-                os.makedirs(attn_path_folder, exist_ok=True)
-                attn_path = os.path.join(attn_path_folder, sample['id'] + ".pt")
-    
-                if not store_all:
-                    stacked = torch.stack([layer.self_attn.attn for layer in layers])
-                    torch.save(stacked, attn_path)
-                
-                predicted_token_id = logits.argmax().item()
-                predicted_token_str = processor.decode(predicted_token_id, skip_special_tokens=True, clean_up_tokenization_spaces=False)
-                # print(logits)
-                # print(top_logit)
-                # print(stacked.shape)
-                # pred_ans = [d.detach() for d in processor.batch_decode([top_logit])]
-                pred_ans = processor.batch_decode([top_logit])
-                
-                temp = {
-                    "id": sample['id'],
-                    "predicted_ans": pred_ans,
-                    "real_ans": sample['answer'],
-                    "attn_path": attn_path
-                }
-                
-                temp['is_correct'] = pred_ans == sample['answer']
-                out_samples[sample['id']] = temp
-    
-                del base, noop, output, attn, logits
-                gc.collect()
-                torch.cuda.empty_cache()  # (optional, see below)
+                try:
+                    # Prepare inputs
+                    base = sample_to_model_inputs(sample, sample['final_input_prompt_base'], processor)
+                    noop = sample_to_model_inputs(sample, sample['final_input_prompt_noop'], processor)
+                    noop_indices = find_inserted_section_indices(base.input_ids[0], noop.input_ids[0])
+                    img_segments = find_target_segments(noop.input_ids[0])
+                    final_mask = final_selection_mask(noop.input_ids[0], noop_indices)
+
+                    # Set up attention context
+                    for layer in layers:
+                        layer.self_attn.noop_indices = noop_indices
+                        layer.self_attn.img_segments = img_segments
+                        layer.self_attn.not_noop_mask = final_mask
+
+                    # Memory before inference
+                    mem_before = torch.cuda.memory_allocated(device) / (1024**2)  # MB
+
+                    # Run inference
+                    output = model(**noop.to(device), output_attentions=False)
+
+                    # Memory after inference
+                    mem_after = torch.cuda.memory_allocated(device) / (1024**2)  # MB
+
+                    # Update progress bar
+                    pbar.set_description(f"Mem: {mem_before:.1f}MB → {mem_after:.1f}MB")
+
+                    # Process outputs
+                    logits = output.logits.detach().cpu()[0, -1]
+                    top_logit = torch.argmax(logits)
+                    attn = torch.stack([layer.self_attn.attn.detach().cpu() for layer in layers])
+
+                    attn_path_folder = os.path.join(out_dir, "attention_scores")
+                    os.makedirs(attn_path_folder, exist_ok=True)
+                    attn_path = os.path.join(attn_path_folder, sample['id'] + ".pt")
+
+                    if not store_all:
+                        torch.save(attn, attn_path)
+
+                    predicted_token_id = logits.argmax().item()
+                    predicted_token_str = processor.decode(predicted_token_id, skip_special_tokens=True, clean_up_tokenization_spaces=False)
+                    pred_ans = processor.batch_decode([top_logit])
+
+                    temp = {
+                        "id": sample['id'],
+                        "predicted_ans": pred_ans,
+                        "real_ans": sample['answer'],
+                        "attn_path": attn_path,
+                        "is_correct": pred_ans == sample['answer']
+                    }
+
+                    out_samples[sample['id']] = temp
+
+                except Exception as e:
+                    print(f"\n[ERROR] Sample ID: {sample.get('id', 'UNKNOWN')}")
+                    print(f"Sample content: {sample}")
+                    print("Exception Traceback:")
+                    traceback.print_exc()
+
+                finally:
+                    del base, noop, output, attn, logits
+                    gc.collect()
+                    torch.cuda.empty_cache()
 
     return out_samples
 #%%
