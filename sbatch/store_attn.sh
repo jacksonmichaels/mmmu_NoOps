@@ -22,7 +22,7 @@ source ~/.bashrc
 conda init
 conda activate diffuse
 cd /jet/home/billyli/mmmu_NoOps/mmmu
-python extract_attention_scores.py --output_dir="sbatch_results_attn_2" --noop=all
+python extract_attention_scores.py --output_dir="sbatch_results_attn_fixed" --noop=all
 #run pre-compiled program which is already in your project space
 
 ./gpua.out

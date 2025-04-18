@@ -3,4 +3,5 @@
 mmmu/results/*
 mmmu/model_weights/*
 mmmu/sbatch_results_attn/
+mmmu/sbatch_results_attn_2/
 mmmu/mem_leak_testing/

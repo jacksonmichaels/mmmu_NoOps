@@ -433,12 +433,13 @@ def extract_attention(dset, model, processor, out_dir, store_all=False, layers=N
                     print(f"\n[ERROR] Sample ID: {sample.get('id', 'UNKNOWN')}")
                     print(f"Sample content: {sample}")
                     print("Exception Traceback:")
+                    output, attn, logits = None
                     traceback.print_exc()
 
                 finally:
-                    del base, noop, output, attn, logits
-                    gc.collect()
-                    torch.cuda.empty_cache()
+                    # del base, noop, output, attn, logits
+                    # gc.collect()
+                    # torch.cuda.empty_cache()
 
     return out_samples
 #%%
